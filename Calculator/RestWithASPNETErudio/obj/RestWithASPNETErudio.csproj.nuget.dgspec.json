@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\00_RestWithASPNETUdemy_ScaffoldViaVisualStudio\\Calculator\\RestWithASPNETErudio\\RestWithASPNETErudio.csproj": {}
+    "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\Calculator\\RestWithASPNETErudio\\RestWithASPNETErudio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\00_RestWithASPNETUdemy_ScaffoldViaVisualStudio\\Calculator\\RestWithASPNETErudio\\RestWithASPNETErudio.csproj": {
+    "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\Calculator\\RestWithASPNETErudio\\RestWithASPNETErudio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\00_RestWithASPNETUdemy_ScaffoldViaVisualStudio\\Calculator\\RestWithASPNETErudio\\RestWithASPNETErudio.csproj",
+        "projectUniqueName": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\Calculator\\RestWithASPNETErudio\\RestWithASPNETErudio.csproj",
         "projectName": "RestWithASPNETErudio",
-        "projectPath": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\00_RestWithASPNETUdemy_ScaffoldViaVisualStudio\\Calculator\\RestWithASPNETErudio\\RestWithASPNETErudio.csproj",
+        "projectPath": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\Calculator\\RestWithASPNETErudio\\RestWithASPNETErudio.csproj",
         "packagesPath": "C:\\Users\\otavi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\00_RestWithASPNETUdemy_ScaffoldViaVisualStudio\\Calculator\\RestWithASPNETErudio\\obj\\",
+        "outputPath": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\Calculator\\RestWithASPNETErudio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

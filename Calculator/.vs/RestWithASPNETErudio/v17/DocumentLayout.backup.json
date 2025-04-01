@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\00_RestWithASPNETUdemy_ScaffoldViaVisualStudio\\Calculator\\",
+  "WorkspaceRootPath": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\Calculator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0906B788-5BDE-4147-BA0F-BAEBA1D3BE23}|RestWithASPNETErudio\\RestWithASPNETErudio.csproj|c:\\users\\otavi\\downloads\\restwithasp-net5udemy\\restwithasp-net5udemy\\00_restwithaspnetudemy_scaffoldviavisualstudio\\calculator\\restwithaspneterudio\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0906B788-5BDE-4147-BA0F-BAEBA1D3BE23}|RestWithASPNETErudio\\RestWithASPNETErudio.csproj|c:\\users\\otavi\\downloads\\restwithasp-net5udemy\\restwithasp-net5udemy\\calculator\\restwithaspneterudio\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0906B788-5BDE-4147-BA0F-BAEBA1D3BE23}|RestWithASPNETErudio\\RestWithASPNETErudio.csproj|solutionrelative:restwithaspneterudio\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0906B788-5BDE-4147-BA0F-BAEBA1D3BE23}|RestWithASPNETErudio\\RestWithASPNETErudio.csproj|c:\\users\\otavi\\downloads\\restwithasp-net5udemy\\restwithasp-net5udemy\\00_restwithaspnetudemy_scaffoldviavisualstudio\\calculator\\restwithaspneterudio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0906B788-5BDE-4147-BA0F-BAEBA1D3BE23}|RestWithASPNETErudio\\RestWithASPNETErudio.csproj|solutionrelative:restwithaspneterudio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0906B788-5BDE-4147-BA0F-BAEBA1D3BE23}|RestWithASPNETErudio\\RestWithASPNETErudio.csproj|c:\\users\\otavi\\downloads\\restwithasp-net5udemy\\restwithasp-net5udemy\\calculator\\restwithaspneterudio\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0906B788-5BDE-4147-BA0F-BAEBA1D3BE23}|RestWithASPNETErudio\\RestWithASPNETErudio.csproj|solutionrelative:restwithaspneterudio\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CalculatorController.cs",
-              "DocumentMoniker": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\00_RestWithASPNETUdemy_ScaffoldViaVisualStudio\\Calculator\\RestWithASPNETErudio\\Controllers\\CalculatorController.cs",
-              "RelativeDocumentMoniker": "RestWithASPNETErudio\\Controllers\\CalculatorController.cs",
-              "ToolTip": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\00_RestWithASPNETUdemy_ScaffoldViaVisualStudio\\Calculator\\RestWithASPNETErudio\\Controllers\\CalculatorController.cs",
-              "RelativeToolTip": "RestWithASPNETErudio\\Controllers\\CalculatorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T13:13:50.542Z",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\Calculator\\RestWithASPNETErudio\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "RestWithASPNETErudio\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\Calculator\\RestWithASPNETErudio\\Properties\\launchSettings.json",
+              "RelativeToolTip": "RestWithASPNETErudio\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-01T11:39:42.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\00_RestWithASPNETUdemy_ScaffoldViaVisualStudio\\Calculator\\RestWithASPNETErudio\\Program.cs",
-              "RelativeDocumentMoniker": "RestWithASPNETErudio\\Program.cs",
-              "ToolTip": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\00_RestWithASPNETUdemy_ScaffoldViaVisualStudio\\Calculator\\RestWithASPNETErudio\\Program.cs",
-              "RelativeToolTip": "RestWithASPNETErudio\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CalculatorController.cs",
+              "DocumentMoniker": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\Calculator\\RestWithASPNETErudio\\Controllers\\CalculatorController.cs",
+              "RelativeDocumentMoniker": "RestWithASPNETErudio\\Controllers\\CalculatorController.cs",
+              "ToolTip": "C:\\Users\\otavi\\Downloads\\RestWithASP-NET5Udemy\\RestWithASP-NET5Udemy\\Calculator\\RestWithASPNETErudio\\Controllers\\CalculatorController.cs*",
+              "RelativeToolTip": "RestWithASPNETErudio\\Controllers\\CalculatorController.cs*",
+              "ViewState": "AgIAADsAAAAAAAAAAAAYwEwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T12:13:10.122Z"
+              "WhenOpened": "2025-03-31T13:13:50.542Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -14,7 +14,7 @@ namespace RestWithASPNETErudio.Controllers
         }
 
         [HttpGet("sum/{firstNumber}/{secondNumber}")] //Onde o usuário irá definir os números
-        public IActionResult Get(string firstNumber, string secondNumber)
+        public IActionResult sum(string firstNumber, string secondNumber)
         {
                 //verifica se os numeros são validos
             if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
@@ -26,6 +26,57 @@ namespace RestWithASPNETErudio.Controllers
             //retorna erro caso os numeros não sejam validos
             return BadRequest("Invalid Input");
         }
+        [HttpGet("sub/{firstNumber}/{secondNumber}")]
+        public IActionResult sub(string firstNumber, string secondNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                var sub = ConvertToDecimal(firstNumber) - ConvertToDecimal(secondNumber);
+                return Ok(sub.ToString());
+            }
+            return BadRequest("Invalid Input");
+        }
+        [HttpGet("mul/{firstNumber}/{secondNumber}")] 
+        public IActionResult mul(string firstNumber, string secondNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                var mul = ConvertToDecimal(firstNumber) * ConvertToDecimal(secondNumber);
+                return Ok(mul.ToString());
+            }
+            return BadRequest("Invalid Input");
+        }
+        [HttpGet("div/{firstNumber}/{secondNumber}")]
+        public IActionResult div(string firstNumber, string secondNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                var div = ConvertToDecimal(firstNumber) / ConvertToDecimal(secondNumber);
+                return Ok(div.ToString());
+            }
+            return BadRequest("Invalid Input");
+        }
+        [HttpGet("med/{firstNumber}/{secondNumber}")]
+        public IActionResult med(string firstNumber, string secondNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                var med = (ConvertToDecimal(firstNumber) * ConvertToDecimal(secondNumber)) / 2;
+                return Ok(med.ToString());
+            }
+            return BadRequest("Invalid Input");
+        }
+        [HttpGet("square/{firstNumber}")]
+        public IActionResult square(string firstNumber)
+        {
+            if (IsNumeric(firstNumber))
+            {
+                var square = Math.Sqrt((double)ConvertToDecimal(firstNumber));
+                return Ok(square.ToString());
+            }
+            return BadRequest("Invalid Input");
+        }
+
 
         private decimal ConvertToDecimal(string strNumber)
         {
