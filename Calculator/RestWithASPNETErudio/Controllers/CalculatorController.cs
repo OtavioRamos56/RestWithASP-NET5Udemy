@@ -61,7 +61,7 @@ namespace RestWithASPNETErudio.Controllers
         {
             if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
             {
-                var med = (ConvertToDecimal(firstNumber) * ConvertToDecimal(secondNumber)) / 2;
+                var med = (ConvertToDecimal(firstNumber) + ConvertToDecimal(secondNumber)) / 2;
                 return Ok(med.ToString());
             }
             return BadRequest("Invalid Input");

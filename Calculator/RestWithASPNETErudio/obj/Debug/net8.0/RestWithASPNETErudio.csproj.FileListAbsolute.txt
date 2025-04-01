@@ -82,9 +82,9 @@ C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\
 C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RestWithASPNETErudio.props
 C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RestWithASPNETErudio.props
 C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\RestWithASPNETErudio.dll
 C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\refint\RestWithASPNETErudio.dll
 C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\RestWithASPNETErudio.pdb
 C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\RestWithASPNETErudio.genruntimeconfig.cache
 C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\ref\RestWithASPNETErudio.dll
+C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

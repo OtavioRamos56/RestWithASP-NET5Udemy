@@ -1,38 +1,77 @@
-# RestWithASP-NET5Udemy
-# Calculator
+# API Calculadora - ASP.NET Core
 
-Português:
+Este projeto é uma API REST desenvolvida em C# utilizando ASP.NET Core. A API permite realizar operações matemáticas básicas, como soma, subtração, multiplicação, divisão, média e raiz quadrada.
 
-Há 6 métodos para resolver calculos:
+## Tecnologias Utilizadas
 
-Operator	Descrição        
-sum	        Adição              
-sub	        Subtração           
-mul	        Multiplicação       
-div	        Divisão             
-med	        Média               
-square	    Raiz Quadrada      
+- C#
+- .NET 8
+- ASP.NET Core
 
-Onde deve ser implementado na URL qual operação será realizada, ex:
+## Como Executar o Projeto
 
-https://localhost:45300/Calculator/sum/1/1
-sum = Adição, 1 e 1 são os valores atribuidos
-Onde será somada 1+1
+1. **Clonar o Repositório**
+   ```bash
+   git clone https://github.com/OtavioRamos56/RestWithASP-NET5Udemy.git
+   ```
+2. **Acessar o Diretório do Projeto**
+   ```bash
+   cd RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio
+   ```
+   Caso possua o Visual Studio só precisa abrir o projeto "RestWithASPNETErudio.sln" e executa-lo
 
-English:
+3. **Restaurar Dependências**
+   ```bash
+   dotnet restore
+   ```
+4. **Executar o Projeto**
+   ```bash
+   dotnet run
+   ```
 
-It has 6 calculation methods:
+A API estará disponível em `http://localhost:5057`.
 
-Operator    Description
-sum	        Addition
-sub	        Subtraction
-mul	        Multiplication
-div	        Division
-med	        Mean
-square	    SquareRoot
+| Operação     | Descrição |
+|--------------|-----------|
+| Soma         | sum       |
+| Subtração    | sub       |
+| Multiplicação| mul       |
+| Divisão      | div       |
+| Média        | med       |
+| Raiz Quadrada| square    | 
 
-Where the operation to be performed should be implemented in the URL, ex:
+## Endpoints Disponíveis
 
-https://localhost:45300/Calculator/sum/1/1
-sum = Addition, 1 and 1 are the assigned values 
-Where 1+1 will be added
+### Soma
+- **Requisição:** `/calculator/sum/{firstNumber}/{secondNumber}`
+- **Exemplo:** `/calculator/sum/10/5`
+- **Resposta:** `15`
+
+### Subtração
+- **Requisição:** `/calculator/sub/{firstNumber}/{secondNumber}`
+- **Exemplo:** `/calculator/sub/10/5`
+- **Resposta:** `5`
+
+### Multiplicação
+- **Requisição:** `/calculator/mul/{firstNumber}/{secondNumber}`
+- **Exemplo:** `/calculator/mul/10/5`
+- **Resposta:** `50`
+
+### Divisão
+- **Requisição:** `/calculator/div/{firstNumber}/{secondNumber}`
+- **Exemplo:** `/calculator/div/10/5`
+- **Resposta:** `2`
+
+### Média
+- **Requisição:** `/calculator/med/{firstNumber}/{secondNumber}`
+- **Exemplo:** `/calculator/med/10/5`
+- **Resposta:** `7.5`
+
+### Raiz Quadrada
+- **Requisição:** `/calculator/square/{firstNumber}`
+- **Exemplo:** `/calculator/square/25`
+- **Resposta:** `5`
+
+## Licença
+
+Este projeto está licenciado sob os termos da Licença MIT.
