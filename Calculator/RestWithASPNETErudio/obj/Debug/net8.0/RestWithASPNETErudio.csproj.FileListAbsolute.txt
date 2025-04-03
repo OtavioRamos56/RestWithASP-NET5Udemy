@@ -87,4 +87,3 @@ C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\
 C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\RestWithASPNETErudio.pdb
 C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\RestWithASPNETErudio.genruntimeconfig.cache
 C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\ref\RestWithASPNETErudio.dll
-C:\Users\otavi\Downloads\RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

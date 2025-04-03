@@ -16,7 +16,7 @@ Este projeto é uma API REST desenvolvida em C# utilizando ASP.NET Core. A API p
    ```
 2. **Acessar o Diretório do Projeto**
    ```bash
-   cd RestWithASP-NET5Udemy\RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio
+   cd RestWithASP-NET5Udemy\Calculator\RestWithASPNETErudio
    ```
    Caso possua o Visual Studio só precisa abrir o projeto "RestWithASPNETErudio.sln" e executa-lo
 
