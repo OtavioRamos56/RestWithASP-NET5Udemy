@@ -1,9 +1,9 @@
-using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using RestWithASPNETErudio.Model.Context;
-using RestWithASPNETErudio.Services;
-using RestWithASPNETErudio.Services.Implementations;
+using RestWithASPNETErudio.Business;
+using RestWithASPNETErudio.Business.Implementations;
+using RestWithASPNETErudio.Repository.Implementations;
+using RestWithASPNETErudio.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,11 +13,14 @@ builder.Services.AddControllers();
 var connection = builder.Configuration["MySQLConnection:MySQLConnectionString"];
 builder.Services.AddDbContext<MySQLContext>(options => options.UseMySql(
     connection, new MySqlServerVersion(new Version(9, 2))));
+//Versioning API
+
+builder.Services.AddApiVersioning();
 
 //Dependency Injection
 
-builder.Services.AddScoped<IPersonService, PersonServiceImplementation>();
-
+builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
+builder.Services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
