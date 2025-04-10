@@ -18,5 +18,18 @@ namespace RestWithASPNETErudio.Repository.Implementations
         {
             return _context.Books.ToList();
         }
+        public Book Create(Book book)
+        {
+            try
+            {
+                _context.Add(book);
+                _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return book;
+        }
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RestWithASPNETErudio.Model;
 using RestWithASPNETErudio.Business;
+using System.Reflection.Metadata.Ecma335;
 
 namespace RestWithASPNETErudio.Controllers
 {
@@ -24,5 +25,12 @@ namespace RestWithASPNETErudio.Controllers
         {
             return Ok(_bookBusiness.FindAll());
         }
+        [HttpPost]
+        public IActionResult Post([FromBody] Book book)
+        {
+            if (book == null) return BadRequest();
+            return Ok(_bookBusiness.Create(book));
+        }
     }
 }
+
