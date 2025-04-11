@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RestWithASPNETErudio.Model;
 using RestWithASPNETErudio.Business;
+using System.Reflection.Metadata.Ecma335;
 
 namespace RestWithASPNETErudio.Controllers
 {
@@ -24,6 +25,7 @@ namespace RestWithASPNETErudio.Controllers
         {
             return Ok(_bookBusiness.FindAll());
         }
+<<<<<<< HEAD
 
         [HttpGet("{id}")]
         public IActionResult Get(long id)
@@ -33,12 +35,15 @@ namespace RestWithASPNETErudio.Controllers
             return Ok(book);
         }
 
+=======
+>>>>>>> bd4ec5005d7389e9ea9fd7b9f332580a24f1757f
         [HttpPost]
         public IActionResult Post([FromBody] Book book)
         {
             if (book == null) return BadRequest();
             return Ok(_bookBusiness.Create(book));
         }
+<<<<<<< HEAD
 
         [HttpPut]
         public IActionResult Put([FromBody] Book book)
@@ -53,5 +58,8 @@ namespace RestWithASPNETErudio.Controllers
             _bookBusiness.Delete(id);
             return NoContent();
         }
+=======
+>>>>>>> bd4ec5005d7389e9ea9fd7b9f332580a24f1757f
     }
 }
+
