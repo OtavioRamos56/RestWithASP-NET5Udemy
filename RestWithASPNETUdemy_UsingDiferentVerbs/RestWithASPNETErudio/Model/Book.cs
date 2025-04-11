@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using RestWithASPNETErudio.Model.Base;
 
 namespace RestWithASPNETErudio.Model
 {
     [Table("books")]
-    public class Book
+    public class Book : BaseEntity
     {
-        [Column("id")]
-        public long Id { get; set; }
+        [Column("title")]
+        public string Title { get; set; }
 
         [Column("author")]
         public string Author { get; set; }
@@ -17,7 +18,6 @@ namespace RestWithASPNETErudio.Model
         [Column("price")]
         public decimal Price { get; set; }
 
-        [Column("title")]
-        public string Title { get; set; }
+
     }
 }

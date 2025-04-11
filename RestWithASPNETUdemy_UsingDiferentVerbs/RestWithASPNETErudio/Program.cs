@@ -2,11 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using RestWithASPNETErudio.Model.Context;
 using RestWithASPNETErudio.Business;
 using RestWithASPNETErudio.Business.Implementations;
-using RestWithASPNETErudio.Repository.Implementations;
-using RestWithASPNETErudio.Repository;
 using Serilog;
 using MySqlConnector;
 using EvolveDb;
+using RestWithASPNETErudio.Repository.Generic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,9 +29,9 @@ builder.Services.AddApiVersioning();
 //Dependency Injection
 
 builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-builder.Services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IBookBusiness, BooksBusinessImplementation>();
-builder.Services.AddScoped<IBooksRepository, BooksRepositoryImplementation>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
