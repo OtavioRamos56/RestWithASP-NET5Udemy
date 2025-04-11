@@ -19,5 +19,9 @@ namespace RestWithASPNETErudio.Business.Implementations
         {
             return _repository.FindAll();
         }
-    }
+        public Book Create(Book book)
+        {
+            return _repository.Create(book);
+        }
+}
 }
