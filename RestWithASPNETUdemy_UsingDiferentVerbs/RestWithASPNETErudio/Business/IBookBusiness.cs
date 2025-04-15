@@ -1,17 +1,13 @@
-﻿using RestWithASPNETErudio.Model;
+﻿using RestWithASPNETErudio.Data.VO;
 
 namespace RestWithASPNETErudio.Business
 {
     public interface IBookBusiness
     {
-        Book Create(Book book);
-        Book FindById(long id);
-        List<Book> FindAll();
-<<<<<<< HEAD
-        Book Update(Book book);
+        BookVO Create(BookVO book);
+        BookVO FindById(long id);
+        List<BookVO> FindAll();
+        BookVO Update(BookVO book);
         void Delete(long id);
-=======
-        Book Create(Book book);
->>>>>>> bd4ec5005d7389e9ea9fd7b9f332580a24f1757f
     }
 }

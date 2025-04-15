@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="db\migrations\" />
-    <Folder Include="Repository\Implementations\" />
   </ItemGroup>
 
   <ItemGroup>

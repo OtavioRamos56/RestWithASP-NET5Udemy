@@ -1,7 +1,7 @@
 using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
-using RestWithASPNETErudio.Model;
 using RestWithASPNETErudio.Business;
+using RestWithASPNETErudio.Data.VO;
 
 namespace RestWithASPNETErudio.Controllers
 {
@@ -32,13 +32,13 @@ namespace RestWithASPNETErudio.Controllers
             return Ok(person);
         }
         [HttpPost]
-        public IActionResult Post([FromBody] Person person)
+        public IActionResult Post([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest();
             return Ok(_personBusiness.Create(person));
         }
         [HttpPut]
-        public IActionResult Put([FromBody] Person person)
+        public IActionResult Put([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest();
             return Ok(_personBusiness.Update(person));
