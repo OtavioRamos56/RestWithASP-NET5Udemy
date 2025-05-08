@@ -9,6 +9,15 @@ using RestWithASPNETErudio.Repository.Generic;
 using RestWithASPNETErudio.HyperMedia.Enricher;
 using Microsoft.AspNetCore.Rewrite;
 using RestWithASPNETErudio.HyperMedia.Filters;
+using RestWithASPNETErudio.Services;
+using RestWithASPNETErudio.Services.Implementations;
+using RestWithASPNETErudio.Repository;
+using RestWithASPNETErudio.Configurations;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.AspNetCore.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 var appName = "Rest API's RESTful From 0 to zure with ASP.NET Core 8 and Docker";
@@ -16,6 +25,38 @@ var appVersion = "v1";
 var appDescription = $"REST API RESTful developed in course '{appName}'";
 
 // Add services to the container.
+
+var tokenConfiguration = new TokenConfiguration();
+new ConfigureFromConfigurationOptions<TokenConfiguration>(
+    builder.Configuration.GetSection("TokenConfigurations"))
+    .Configure(tokenConfiguration);
+
+builder.Services.AddSingleton(tokenConfiguration);
+
+builder.Services.AddAuthentication(Options =>
+{
+    Options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    Options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer(Options =>
+    {
+        Options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = tokenConfiguration.Issuer,
+            ValidAudience = tokenConfiguration.Audience,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenConfiguration.Secret))
+        };
+    });
+
+builder.Services.AddAuthorization(auth => {
+    auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+        .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+        .RequireAuthenticatedUser().Build());
+});
 
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
@@ -74,8 +115,14 @@ builder.Services.AddApiVersioning();
 //Dependency Injection
 
 builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IBookBusiness, BooksBusinessImplementation>();
+builder.Services.AddScoped<ILoginBusiness, LoginBusinessImplementation>();
+
+builder.Services.AddTransient<ITokenService, TokenService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+
+builder.Services.AddScoped<ILoginBusiness, LoginBusinessImplementation>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 var app = builder.Build();
 
@@ -93,9 +140,9 @@ app.UseSwaggerUI(c => {
 
 });
 
-var option = new RewriteOptions();
-option.AddRedirect("^$", "swagger");
-app.UseRewriter(option);
+var options = new RewriteOptions();
+options.AddRedirect("^$", "swagger");
+app.UseRewriter(options);
 app.UseAuthorization();
 
 app.MapControllers();
@@ -110,7 +157,8 @@ void MigrateDataBase(string connection)
         var evolve = new Evolve(evolveConnection, Log.Information)
         {
             Locations = new List<string> { "db/migrations", "db/dataset" },
-            IsEraseDisabled = true
+            IsEraseDisabled = true,
+            OutOfOrder = true
         };
         evolve.Migrate();
     }

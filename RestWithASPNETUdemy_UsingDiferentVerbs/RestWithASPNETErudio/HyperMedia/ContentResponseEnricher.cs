@@ -3,17 +3,18 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Routing;
 using RestWithASPNETErudio.HyperMedia.Abstract;
+using RestWithASPNETErudio.HyperMedia.Utils;
 
 namespace RestWithASPNETErudio.HyperMedia
 {
-    public abstract class ContentResponseEnricher<T> : IResponseEnricher where T : class
+    public abstract class ContentResponseEnricher<T> : IResponseEnricher where T : ISupportHyperMedia
     {
         public ContentResponseEnricher()
         {
         }
         public bool CanEnrich(Type contentType)
         {
-            return contentType == typeof(T) || contentType == typeof(List<T>);
+            return contentType == typeof(T) || contentType == typeof(List<T>) || contentType == typeof(PagedSearchVO<T>);
         }
         protected abstract Task EnrichContent(T content, IUrlHelper urlHelper);
         bool IResponseEnricher.CanEnrich(ResultExecutingContext response)
@@ -38,6 +39,13 @@ namespace RestWithASPNETErudio.HyperMedia
                 {
                     ConcurrentBag<T> bag = new ConcurrentBag<T>(collection);
                     Parallel.ForEach(bag, (element) =>
+                    {
+                        EnrichContent(element, urlHelper).Wait();
+                    });
+                }
+                else if (okObjectResult.Value is PagedSearchVO<T> pagedSearch)
+                {
+                    Parallel.ForEach(pagedSearch.List.ToList(), (element) =>
                     {
                         EnrichContent(element, urlHelper).Wait();
                     });

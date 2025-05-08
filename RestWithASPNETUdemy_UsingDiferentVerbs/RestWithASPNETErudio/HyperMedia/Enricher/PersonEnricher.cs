@@ -34,6 +34,13 @@ namespace RestWithASPNETErudio.HyperMedia.Enricher
                 Href = link,
                 Rel = RelationType.self,
                 Type = ResponseTypeFormat.DefaltPut
+            });        
+            content.Links.Add(new HyperMediaLink()
+            {
+                Action = HttpActionVerb.PATCH,
+                Href = link,
+                Rel = RelationType.self,
+                Type = ResponseTypeFormat.DefaltPatch
             });
             content.Links.Add(new HyperMediaLink()
             {

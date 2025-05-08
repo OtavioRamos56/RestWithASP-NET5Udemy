@@ -1,8 +1,4 @@
-﻿using System;
-using System.Data;
-using System.Diagnostics.Eventing.Reader;
-using Microsoft.EntityFrameworkCore;
-using RestWithASPNETErudio.Model;
+﻿using Microsoft.EntityFrameworkCore;
 using RestWithASPNETErudio.Model.Base;
 using RestWithASPNETErudio.Model.Context;
 
@@ -10,7 +6,7 @@ namespace RestWithASPNETErudio.Repository.Generic
 {
     public class GenericRepository<T> : IRepository<T> where T : BaseEntity
     {
-        private MySQLContext _context;
+        protected MySQLContext _context;
 
         private DbSet<T> dataset;
         public GenericRepository(MySQLContext context)
@@ -84,5 +80,24 @@ namespace RestWithASPNETErudio.Repository.Generic
 
         }
 
+        public List<T> FindWithPagedSearch(string query)
+        {
+            return dataset.FromSqlRaw<T>(query).ToList();
+        }
+
+        public int GetCount(string query)
+        {
+            var result = "";
+            using (var connection = _context.Database.GetDbConnection())
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+                    result = command.ExecuteScalar().ToString(); ;
+                    }
+                }
+            return int.Parse(result);
+        }
     }
 }

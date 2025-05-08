@@ -7,23 +7,27 @@ namespace RestWithASPNETUdemy.Hypermedia
         public string Rel { get; set; }
 
         private string href;
+        private readonly object _lock = new object();
+
         public string Href
         {
             get
             {
-                object _lock = new object();
                 lock (_lock)
                 {
-                    StringBuilder sb = new StringBuilder(href);
-                    return sb.Replace("%2F", "/").ToString();
+                    return href.Replace("%2F", "/");
                 }
             }
             set
             {
-                href = value;
+                lock (_lock)
+                {
+                    href = value;
+                }
             }
         }
         public string Type { get; set; }
         public string Action { get; set; }
     }
 }
+
